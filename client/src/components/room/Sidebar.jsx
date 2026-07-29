@@ -2,17 +2,13 @@ export default function Sidebar({ participants = [] }) {
   return (
     <aside className='w-64 bg-slate-900 border-r border-slate-800 flex flex-col h-full'>
       <div className='p-4 border-b border-slate-800'>
-        <h2 className='text-xs font-bold uppercase tracking-wider text-indigo-400'>
-          Active Session
-        </h2>
+        <h2 className='text-xs font-bold uppercase tracking-wider text-indigo-400'>Active Session</h2>
         <h1 className='text-lg font-semibold text-slate-100 truncate mt-0.5'>Development Room</h1>
       </div>
 
       <div className='flex-1 overflow-y-auto p-4 space-y-4'>
         <div className='flex items-center justify-between'>
-          <span className='text-xs font-bold uppercase tracking-wider text-slate-400'>
-            Collaborators ({participants.length})
-          </span>
+          <span className='text-xs font-bold uppercase tracking-wider text-slate-400'>Collaborators ({participants.length})</span>
         </div>
 
         <ul className='space-y-2'>
@@ -30,10 +26,7 @@ export default function Sidebar({ participants = [] }) {
 
               <div className='flex-1 min-w-0'>
                 <p className='text-sm font-medium text-slate-200 truncate group-hover:text-white'>
-                  {user.name || 'Anonymous'}{' '}
-                  {user.isYou && (
-                    <span className='text-xs text-slate-500 italic font-normal ml-1'>(You)</span>
-                  )}
+                  {user.name || 'Anonymous'} {user.isYou && <span className='text-xs text-slate-500 italic font-normal ml-1'>(You)</span>}
                 </p>
               </div>
             </li>

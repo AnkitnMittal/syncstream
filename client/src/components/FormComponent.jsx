@@ -7,10 +7,7 @@ export default function FormComponent() {
     <div className='flex w-full max-w-md flex-col items-center justify-center gap-4 p-4 sm:p-8 bg-slate-900 border border-slate-800 rounded-xl shadow-2xl'>
       <form onSubmit={joinExistingRoom} className='w-full space-y-4'>
         <div>
-          <label
-            htmlFor='username'
-            className='block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1'
-          >
+          <label htmlFor='username' className='block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1'>
             Your Name
           </label>
           <input
@@ -33,10 +30,7 @@ export default function FormComponent() {
           </button>
 
           <div>
-            <label
-              htmlFor='password'
-              className='block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1'
-            >
+            <label htmlFor='password' className='block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1'>
               Optional Room Password / PIN
             </label>
             <input
@@ -53,18 +47,13 @@ export default function FormComponent() {
 
         <div className='relative my-6 flex py-2 items-center'>
           <div className='grow border-t border-slate-800'></div>
-          <span className='shrink mx-4 text-xs font-bold uppercase tracking-widest text-slate-600 select-none'>
-            OR JOIN EXISTING
-          </span>
+          <span className='shrink mx-4 text-xs font-bold uppercase tracking-widest text-slate-600 select-none'>OR JOIN EXISTING</span>
           <div className='grow border-t border-slate-800'></div>
         </div>
 
         <div className='space-y-3'>
           <div>
-            <label
-              htmlFor='roomId'
-              className='block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1'
-            >
+            <label htmlFor='roomId' className='block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1'>
               Room ID
             </label>
             <input

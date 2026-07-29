@@ -29,9 +29,7 @@ export function useRoomSession(roomId, username, password, navigate) {
     };
 
     const handlePeerJoined = (peer) => {
-      setParticipants((prev) =>
-        prev.some((p) => p.id === peer.id) ? prev : [...prev, { ...peer, isYou: false }],
-      );
+      setParticipants((prev) => (prev.some((p) => p.id === peer.id) ? prev : [...prev, { ...peer, isYou: false }]));
     };
 
     const handlePeerLeft = (peer) => {

@@ -3,10 +3,7 @@ export default function Toolbar({ language, setLanguage }) {
     <div className='h-14 bg-slate-900 border-b border-slate-800 px-6 flex items-center justify-between shadow-sm'>
       <div className='flex items-center space-x-4'>
         <div className='flex items-center space-x-2'>
-          <label
-            htmlFor='language-select'
-            className='text-xs font-semibold text-slate-400 uppercase tracking-wider'
-          >
+          <label htmlFor='language-select' className='text-xs font-semibold text-slate-400 uppercase tracking-wider'>
             Language:
           </label>
           <select

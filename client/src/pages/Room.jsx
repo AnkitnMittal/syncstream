@@ -33,12 +33,7 @@ export default function Room() {
     }
   }, [roomId, navigate]);
 
-  const { language, participants, handleLanguageChange } = useRoomSession(
-    roomId,
-    username,
-    password,
-    navigate,
-  );
+  const { language, participants, handleLanguageChange } = useRoomSession(roomId, username, password, navigate);
 
   const { socket } = useSocketService();
 

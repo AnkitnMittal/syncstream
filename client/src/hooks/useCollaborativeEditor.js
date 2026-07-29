@@ -49,12 +49,7 @@ export function useCollaborativeEditor(socket, roomId, editorInstance) {
     socket.on('sync_doc_update', handleRemoteDocUpdate);
     socket.on('sync_initial_state', handleInitialStateSync);
 
-    const binding = new MonacoBinding(
-      yText,
-      editorInstance.getModel(),
-      new Set([editorInstance]),
-      null,
-    );
+    const binding = new MonacoBinding(yText, editorInstance.getModel(), new Set([editorInstance]), null);
     bindingRef.current = binding;
 
     socket.emit('request_initial_state', { roomId });

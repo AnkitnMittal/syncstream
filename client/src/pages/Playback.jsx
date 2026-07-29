@@ -10,17 +10,7 @@ export default function Playback() {
   const { roomId } = useParams();
   const navigate = useNavigate();
 
-  const {
-    events,
-    playbackLanguage,
-    currentStep,
-    setCurrentStep,
-    isPlaying,
-    setIsPlaying,
-    activeAuthor,
-    isLoading,
-    editorRef,
-  } = usePlaybackSession(roomId);
+  const { events, playbackLanguage, currentStep, setCurrentStep, isPlaying, setIsPlaying, activeAuthor, isLoading, editorRef } = usePlaybackSession(roomId);
 
   if (isLoading) {
     return (
