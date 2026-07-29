@@ -13,7 +13,6 @@ export const getPlaybackSession = async (req, res, next) => {
   const { roomId } = req.params;
 
   const room = await roomService.findRoomById(roomId);
-
   if (!room) {
     return next(new AppError('The target room does not exist.', 404));
   }

@@ -29,6 +29,6 @@ export const roomService = {
   },
 
   async updateRoomLanguage(roomId, language) {
-    return await Room.findByIdAndUpdate(roomId, { language });
+    return await Room.findByIdAndUpdate(roomId, { language }, { new: true });
   },
 };
